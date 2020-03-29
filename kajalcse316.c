@@ -51,7 +51,23 @@ int main()
     }
   }
 
-	
+    printf("\n\n\t\t\t -------------- Now Values are --------------\n\n");
+  printf("\t\t\t---------------------------------------\n");
+  printf("\t\t\t| Process | Arrival Time | Burst Time |\n");
+  printf("\t\t\t---------------------------------------\n");
+  for(i=0;i<n;i++)
+  {
+    printf("\t\t\t|  P[%0.0lf]   |       %0.0lf      |     %0.0lf      |\n",process[i],arrivalTime[i],burstTime[i]);
+  }
+    printf("\t\t\t---------------------------------------\n");
+
+
+/*Arranging the table according to Burst time,
+Execution time and Arrival Time
+Arrival time <= Execution time
+*/
+
+
   getch();
   return 0;
 }
