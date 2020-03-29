@@ -28,6 +28,29 @@ int main()
 
 
   printf("\n\n\t\t\t-------- Sorting Processes according to Arrivaltime --------\n");
+	for(i=0;i<n;i++)
+  {
+    for(j=0;j<n;j++)
+    {
+      if(arrivalTime[i]<arrivalTime[j])
+      {
+        
+        temp = burstTime[j];
+        burstTime[j] = burstTime[i];
+        burstTime [i] = temp;
+	
+	      temp = process[j];
+        process[j] = process[i];
+        process[i] = temp;
+
+	      temp = arrivalTime[j];
+        arrivalTime[j] = arrivalTime[i];
+        arrivalTime[i] = temp;
+      
+      }
+    }
+  }
+
 	
   getch();
   return 0;
